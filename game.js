@@ -28,6 +28,14 @@ class Game {
     console.log("Spock vaporizes Rock");
     console.log("The first player to three wins is the winner. Good luck!");
   }
+
+  DisplayGameWinner() {
+    if (this.playerOne.score > this.playerTwo.score) {
+      console.log(this.playerOne.name + " wins the game!!!!!");
+    } else {
+      console.log(this.playerTwo.name + " wins the game!!!!!");
+    }
+  }
 }
 
 //Rock crushes Scissors
