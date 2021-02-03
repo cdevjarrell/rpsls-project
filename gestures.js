@@ -2,7 +2,7 @@
 
 class Gestures {
   constructor() {
-    this.gesture = [];
+    this.gesture = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
     
 
 

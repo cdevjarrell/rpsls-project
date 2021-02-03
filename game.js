@@ -52,3 +52,5 @@ function rules() {
 //Lizard eats Paper
 //Paper disproves Spock
 //Spock vaporizes Rock
+
+module.exports.Game = Game;
