@@ -7,13 +7,33 @@
 //RPSLS to be a minimum of "best of three" to decide a winner
 //Option of a single player (human vs AI) or a multipplayer (human vs human) game
 
+class Game {
+  constructor() {
+    this.playerOne = new Player(nameInput());
+    this.playerTwo = new Player(nameInput());
+  }
 
-
+  DisplayRules() {
+    console.log("Welcome to Rock, Paper, Scissors, Lizard, Spock!!!");
+    console.log("Two players will go head to head to see who wins.");
+    console.log("Rock crushes Sciossors");
+    console.log("Scissors cuts Paper");
+    console.log("Paper covers Rock");
+    console.log("Rock crushes Lizard");
+    console.log("Lizard poisons Spock");
+    console.log("Spock smashes Scissors");
+    console.log("Scissors decapitates Lizard");
+    console.log("Lizard eats Paper");
+    console.log("Paper disproves Spock");
+    console.log("Spock vaporizes Rock");
+    console.log("The first player to three wins is the winner. Good luck!");
+  }
+}
 
 //Rock crushes Scissors
 //Scissors cuts Paper
 //Paper covers Rock
-//Rock curshes lizard
+//Rock crushes lizard
 //Lizard poisons Spock
 //Spock smashes Scissors
 //Scissors decapitates Lizard

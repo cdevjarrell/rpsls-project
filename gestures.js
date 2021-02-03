@@ -2,6 +2,9 @@
 
 class Gestures {
   constructor() {
+    this.gesture = [];
     
+
+
   }
 }
