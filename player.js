@@ -40,7 +40,7 @@ class Player {
           break;
         default:
           console.log("Please make a valid selection");
-        //loop back
+          this.PlayerChoices();
       }
     } else {
       console.log("Please make a valid selection");
