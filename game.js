@@ -9,12 +9,28 @@
 
 class Game {
   constructor() {
-    this.playerOne = new Player(nameInput());
-    this.playerTwo = new Player(nameInput());
+    //this.playerOne = new Player();
+    //this.playerTwo = new Player();
+  }
+
+  RunGame() {
+    this.DisplayRules();
   }
 
   DisplayRules() {
-    rules();
+    console.log("Welcome to Rock, Paper, Scissors, Lizard, Spock!!!");
+    console.log("Two players will go head to head to see who wins.");
+    console.log("Rock crushes Sciossors");
+    console.log("Scissors cuts Paper");
+    console.log("Paper covers Rock");
+    console.log("Rock crushes Lizard");
+    console.log("Lizard poisons Spock");
+    console.log("Spock smashes Scissors");
+    console.log("Scissors decapitates Lizard");
+    console.log("Lizard eats Paper");
+    console.log("Paper disproves Spock");
+    console.log("Spock vaporizes Rock");
+    console.log("The first player to three wins is the winner. Good luck!");
   }
 
   DisplayGameWinner() {
@@ -24,22 +40,6 @@ class Game {
       console.log(this.playerTwo.name + " wins the game!!!!!");
     }
   }
-}
-
-function rules() {
-  console.log("Welcome to Rock, Paper, Scissors, Lizard, Spock!!!");
-  console.log("Two players will go head to head to see who wins.");
-  console.log("Rock crushes Sciossors");
-  console.log("Scissors cuts Paper");
-  console.log("Paper covers Rock");
-  console.log("Rock crushes Lizard");
-  console.log("Lizard poisons Spock");
-  console.log("Spock smashes Scissors");
-  console.log("Scissors decapitates Lizard");
-  console.log("Lizard eats Paper");
-  console.log("Paper disproves Spock");
-  console.log("Spock vaporizes Rock");
-  console.log("The first player to three wins is the winner. Good luck!");
 }
 
 //Rock crushes Scissors

@@ -2,9 +2,8 @@
 
 class Gestures {
   constructor() {
-    this.gesture = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
-    
-
-
+    this.gestureArray = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
   }
 }
+
+module.exports = Gestures;
