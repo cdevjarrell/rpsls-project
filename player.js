@@ -5,8 +5,7 @@ const Gestures = require("./gestures");
 
 class Player {
   constructor() {
-    //this.name = name;
-    //this.score = 0;
+    this.score = 0;
     this.Gestures = new Gestures();
   }
 
@@ -41,13 +40,33 @@ class Player {
           break;
         default:
           console.log("Please make a valid selection");
-          PlayerChoices();
+        //loop back
       }
     } else {
       console.log("Please make a valid selection");
-      PlayerChoices();
+      this.PlayerChoices();
     }
   }
 }
 
+class Human extends Player {
+  constructor() {
+    super();
+  }
+
+  PlayerName() {
+    console.log("Please enter your desired name");
+    let name = prompt();
+    return name;
+  }
+}
+
+class Computer extends Player {
+  constructor() {
+    super();
+  }
+}
+
 module.exports = Player;
+module.exports = Human;
+module.exports = Computer;

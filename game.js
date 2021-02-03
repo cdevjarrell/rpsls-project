@@ -1,5 +1,7 @@
 "use strict";
 
+const Gestures = requires("./gestures");
+
 //Properly incorporate inheritance into my game
 //Account for and handle bad user input, ensuring that any user input is validated and reobtained if necessary (validation)
 //Store all of the gestture options/choices in an array. Find a way to utilize array of gestures within code (display options, assign a player a gesture, etc.)
@@ -32,6 +34,8 @@ class Game {
     console.log("Spock vaporizes Rock");
     console.log("The first player to three wins is the winner. Good luck!");
   }
+
+  CompareChoices() {}
 
   DisplayGameWinner() {
     if (this.playerOne.score > this.playerTwo.score) {
