@@ -4,5 +4,5 @@ const Player = require("./player");
 
 let player = new Player();
 
-player.PlayerChoices();
+player.ComputerChoices();
 console.log("We did it!");

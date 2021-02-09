@@ -2,11 +2,17 @@
 
 const prompt = require("prompt-sync")();
 const Gestures = require("./gestures");
+const Rock = require("./gestures");
+const Paper = require("./gestures");
+const Scissors = require("./gestures");
+const Lizard = require("./gestures");
+const Spock = require("./gestures");
 
 class Player {
-  constructor() {
+  constructor(name) {
     this.score = 0;
     this.Gestures = new Gestures();
+    this.name = name;
   }
 
   PlayerChoices() {
@@ -16,42 +22,20 @@ class Player {
 
     let choice = prompt();
 
-    if (choice !== "" && choice !== null && !isNaN(choice)) {
-      switch (choice) {
-        case "1":
-          this.Gestures.gestureArray[0];
-          console.log("You chose Rock!");
-          break;
-        case "2":
-          this.Gestures.gestureArray[1];
-          console.log("You chose Paper!");
-          break;
-        case "3":
-          this.Gestures.gestureArray[2];
-          console.log("You chose Scissors!");
-          break;
-        case "4":
-          this.Gestures.gestureArray[3];
-          console.log("You chose Lizard!");
-          break;
-        case "5":
-          this.Gestures.gestureArray[4];
-          console.log("You chose Spock!");
-          break;
-        default:
-          console.log("Please make a valid selection");
-          this.PlayerChoices();
-      }
-    } else {
-      console.log("Please make a valid selection");
-      this.PlayerChoices();
-    }
+    choices(choice);
+  }
+  ComputerChoices() {
+    let computerChoice = Math.floor(Math.random());
+
+    choices(computerChoice);
   }
 }
 
 class Human extends Player {
-  constructor() {
-    super();
+  constructor(name) {
+    super(name);
+    this.name = name;
+    // member variables (properties)
   }
 
   PlayerName() {
@@ -64,9 +48,47 @@ class Human extends Player {
 class Computer extends Player {
   constructor() {
     super();
+    this.name = "Computer";
+
+    this.ComputerChoices();
+  }
+}
+
+function choices(choice) {
+  if (choice !== "" && choice !== null && !isNaN(choice)) {
+    switch (choice) {
+      case "1":
+        Rock;
+        console.log("You chose Rock!");
+        break;
+      case "2":
+        Paper;
+        console.log("You chose Paper!");
+        break;
+      case "3":
+        Scissors;
+        console.log("You chose Scissors!");
+        break;
+      case "4":
+        Lizard;
+        console.log("You chose Lizard!");
+        break;
+      case "5":
+        Spock;
+        console.log("You chose Spock!");
+        break;
+      default:
+        console.log("Please make a valid selection");
+        let newChoice = prompt();
+        choices(newChoice);
+    }
+  } else {
+    console.log("Please make a valid selection");
+    let newChoice = prompt();
+    choices(newChoice);
   }
 }
 
 module.exports = Player;
 module.exports = Human;
-module.exports = Computer;
+module.exports.computer = Computer;

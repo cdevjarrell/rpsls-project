@@ -1,6 +1,6 @@
 "use strict";
-
-const Gestures = requires("./gestures");
+const Player = require("./player");
+//const Gestures = requires("./gestures");
 
 //Properly incorporate inheritance into my game
 //Account for and handle bad user input, ensuring that any user input is validated and reobtained if necessary (validation)
@@ -8,7 +8,7 @@ const Gestures = requires("./gestures");
 //Correct player to win a given round based on the choices made by each player
 //RPSLS to be a minimum of "best of three" to decide a winner
 //Option of a single player (human vs AI) or a multipplayer (human vs human) game
-
+let player = new Player();
 class Game {
   constructor() {
     //this.playerOne = new Player();
@@ -17,6 +17,10 @@ class Game {
 
   RunGame() {
     this.DisplayRules();
+    this.ComputerChoices();
+    //this.PlayerOptions();
+    //this.CompareChoices();
+    //this.DisplayGameWinner();
   }
 
   DisplayRules() {
@@ -35,7 +39,9 @@ class Game {
     console.log("The first player to three wins is the winner. Good luck!");
   }
 
-  CompareChoices() {}
+  PlayerOptions() {} //Choose whether it's PvP or PvAI
+
+  CompareChoices() {} //Compares player choices to see who wins
 
   DisplayGameWinner() {
     if (this.playerOne.score > this.playerTwo.score) {
@@ -57,4 +63,4 @@ class Game {
 //Paper disproves Spock
 //Spock vaporizes Rock
 
-module.exports.Game = Game;
+module.exports = Game;
